@@ -5,7 +5,11 @@
  * un printable char into hex
  * @list: list given
  * Return: number of prints
+<<<<<<< HEAD
 */
+=======
+ */
+>>>>>>> 64c4238a6c34136c72fc12a38bca7234a7f5ce76
 int print_exe_str(va_list list)
 {
 	char *str;

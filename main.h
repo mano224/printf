@@ -16,8 +16,13 @@
  */
 typedef struct fmt_op
 {
+<<<<<<< HEAD
 	char *op;
 	int (*f)();
+=======
+    char *op;
+    int (*f)();
+>>>>>>> 64c4238a6c34136c72fc12a38bca7234a7f5ce76
 } fmt_t;
 
 int _printf(const char *format, ...);

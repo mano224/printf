@@ -1,16 +1,12 @@
 #include "main.h"
 
 /**
- * print_bin - covert given number to
- * binary and print it using _putchar function
+ * print_oct - covert given number to
+ * octal and print it using _putchar function
  * @list: list given
  * Return: number of prints
-<<<<<<< HEAD
-*/
-=======
  */
->>>>>>> 64c4238a6c34136c72fc12a38bca7234a7f5ce76
-int print_bin(va_list list)
+int print_oct(va_list list)
 {
 	int *arr;
 	int pr_count, i;
@@ -20,10 +16,10 @@ int print_bin(va_list list)
 	a = n;
 	pr_count = 0;
 
-	while (a / 2)
+	while (a / 8)
 	{
 		pr_count++;
-		a /= 2;
+		a /= 8;
 	}
 	pr_count++;
 
@@ -37,17 +33,13 @@ int print_bin(va_list list)
 
 	for (i = 0; i < pr_count; i++)
 	{
-		arr[i] = n % 2;
-		n /= 2;
+		arr[i] = n % 8;
+		n /= 8;
 	}
 
 	for (i = pr_count - 1; i >= 0; i--)
 	{
-<<<<<<< HEAD
-	_putchar(arr[i] + '0');
-=======
 		_putchar(arr[i] + '0');
->>>>>>> 64c4238a6c34136c72fc12a38bca7234a7f5ce76
 	}
 
 	free(arr);
