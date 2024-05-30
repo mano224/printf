@@ -12,7 +12,6 @@
 
 int get_fun(const char *format, va_list list, fmt_t *funs)
 {
-<<<<<<< HEAD
 	int pr_count = 0, i = 0, j;
 
 	while (format[i] != '\0')
@@ -50,45 +49,6 @@ int get_fun(const char *format, va_list list, fmt_t *funs)
 		i++;
 	}
 	return (pr_count);
-=======
-    int pr_count = 0, i = 0, j;
-
-    while (format[i] != '\0')
-    {
-        if (format[i] == '%')
-        {
-            i++;
-            j = 0;
-
-            while (funs[j].op != NULL)
-            {
-                if (format[i] == '%')
-                {
-                    pr_count += _putchar('%');
-                    break;
-                }
-
-                else if (*(funs[j].op) == format[i])
-                {
-                    pr_count += funs[j].f(list);
-                    if (pr_count == -1)
-                        return (-1);
-                    break;
-                }
-                j++;
-            }
-            if (funs[j].op == NULL)
-            {
-                pr_count += _putchar('%');
-                pr_count += _putchar(format[i]);
-            }
-        }
-        else
-            pr_count += _putchar(format[i]);
-        i++;
-    }
-    return (pr_count);
->>>>>>> 64c4238a6c34136c72fc12a38bca7234a7f5ce76
 }
 
 /**
@@ -98,7 +58,6 @@ int get_fun(const char *format, va_list list, fmt_t *funs)
  */
 int _printf(const char *format, ...)
 {
-<<<<<<< HEAD
 	int pr_count = 0;
 	va_list list;
 
@@ -128,7 +87,6 @@ int _printf(const char *format, ...)
 
 	va_end(list);
 	return (pr_count);
-=======
     int pr_count = 0;
     va_list list;
 
@@ -157,5 +115,4 @@ int _printf(const char *format, ...)
 
     va_end(list);
     return (pr_count);
->>>>>>> 64c4238a6c34136c72fc12a38bca7234a7f5ce76
 }
